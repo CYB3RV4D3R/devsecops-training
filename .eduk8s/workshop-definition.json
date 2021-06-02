@@ -1,0 +1,140 @@
+{
+  "apiVersion": "training.eduk8s.io/v1alpha2",
+  "kind": "Workshop",
+  "metadata": {
+    "annotations": {},
+    "creationTimestamp": "2021-06-02T16:35:48Z",
+    "generation": 1,
+    "managedFields": [
+      {
+        "apiVersion": "training.eduk8s.io/v1alpha2",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:annotations": {
+              ".": {},
+              "f:kubectl.kubernetes.io/last-applied-configuration": {}
+            }
+          },
+          "f:spec": {
+            ".": {},
+            "f:content": {
+              ".": {},
+              "f:image": {}
+            },
+            "f:description": {},
+            "f:session": {
+              ".": {},
+              "f:applications": {
+                ".": {},
+                "f:console": {
+                  ".": {},
+                  "f:enabled": {}
+                },
+                "f:docker": {
+                  ".": {},
+                  "f:enabled": {}
+                },
+                "f:editor": {
+                  ".": {},
+                  "f:enabled": {}
+                },
+                "f:registry": {
+                  ".": {},
+                  "f:enabled": {}
+                },
+                "f:terminal": {
+                  ".": {},
+                  "f:enabled": {},
+                  "f:layout": {}
+                },
+                "f:webdav": {
+                  ".": {},
+                  "f:enabled": {}
+                }
+              },
+              "f:namespaces": {
+                ".": {},
+                "f:budget": {}
+              },
+              "f:objects": {},
+              "f:resources": {
+                ".": {},
+                "f:storage": {}
+              }
+            },
+            "f:title": {},
+            "f:url": {},
+            "f:vendor": {}
+          }
+        },
+        "manager": "kubectl-client-side-apply",
+        "operation": "Update",
+        "time": "2021-06-02T16:35:48Z"
+      }
+    ],
+    "name": "lab-workshop-builder",
+    "resourceVersion": "3258",
+    "uid": "dffc8f6e-ba73-49ac-ba81-dd67d16d7025"
+  },
+  "spec": {
+    "content": {
+      "image": "quay.io/eduk8s/lab-workshop-builder:master"
+    },
+    "description": "Workshop environment to assist in creating and testing workshop content.",
+    "session": {
+      "applications": {
+        "console": {
+          "enabled": true
+        },
+        "docker": {
+          "enabled": true
+        },
+        "editor": {
+          "enabled": true
+        },
+        "registry": {
+          "enabled": true
+        },
+        "terminal": {
+          "enabled": true,
+          "layout": "split"
+        },
+        "webdav": {
+          "enabled": true
+        }
+      },
+      "namespaces": {
+        "budget": "medium"
+      },
+      "objects": [
+        {
+          "apiVersion": "rbac.authorization.k8s.io/v1",
+          "kind": "RoleBinding",
+          "metadata": {
+            "name": "$(session_namespace)-builder",
+            "namespace": "$(workshop_namespace)"
+          },
+          "roleRef": {
+            "apiGroup": "rbac.authorization.k8s.io",
+            "kind": "ClusterRole",
+            "name": "edit"
+          },
+          "subjects": [
+            {
+              "kind": "ServiceAccount",
+              "name": "$(service_account)",
+              "namespace": "$(workshop_namespace)"
+            }
+          ]
+        }
+      ],
+      "resources": {
+        "storage": "5Gi"
+      }
+    },
+    "title": "Workshop Builder",
+    "url": "https://github.com/eduk8s/lab-workshop-builder",
+    "vendor": "eduk8s.io"
+  }
+}
