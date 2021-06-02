@@ -1,1 +1,5 @@
-**DevSecOps Training**
+**Welcome to the DevSecOps Course!**
+
+DevSecOps is the abbreviation for development, security, and operations. It integrates security at every phase of the software development lifecycle from the design all the way to the delivery and continuous deployment.
+
+There are major benefits of adopting DevSecOps within your organization. Top of the list would be speed allowing development teams to deliver stable and more secure code faster. Which leads to the second benefit of cost. Development teams delivering code faster leads to reduced costs. Lastly, security is a vital and crucial benefit of DevSecOps. Security is introduced at the very beginning of the development cycle. By shifting the priority of security to the left  allows the code to be reviewed, scanned and tested for security-related issues throughout the entire process allowing to catch issues early on, thus reducing time and cost.

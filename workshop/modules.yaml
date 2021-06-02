@@ -1,12 +1,9 @@
 modules:
     workshop-overview:
         name: Workshop Overview
-        exit_sign: Setup Environment
-    setup-environment:
-        name: Setup Environment
-        exit_sign: Start Workshop
-    exercises/01-sample-content:
-        name: Sample Content
+        exit_sign: Start Lab
+    exercises/linux-introduction:
+        name: Linux Introduction
     workshop-summary:
         name: Workshop Summary
-        exit_sign: Finish Workshop
+        exit_sign: End Lab
