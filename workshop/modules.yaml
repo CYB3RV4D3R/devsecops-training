@@ -1,9 +1,9 @@
 modules:
-    workshop-overview:
-        name: Workshop Overview
+    DSO-overview:
+        name: DSO Overview
         exit_sign: Start Lab
     exercises/linux-introduction:
         name: Linux Introduction
-    workshop-summary:
-        name: Workshop Summary
+    DSO-summary:
+        name: DSO Summary
         exit_sign: End Lab

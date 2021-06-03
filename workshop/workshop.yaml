@@ -1,7 +1,7 @@
-name: Markdown Sample
+name: DevSecOps
 
 modules:
     activate:
-    - workshop-overview
+    - DSO-overview
     - exercises/linux-introduction
-    - workshop-summary
+    - DSO-summary
