@@ -38,30 +38,48 @@ You will need to be familiar with the well-known ports that are commonly used.
 
 There is a handful of useful untilities that comes with Linux to help troubleshoot and view your network. 
 
+#### The ifconfig command
+
+The *ifconfig* command will display your network interfaces.
+
+```execute
+ifconfig
+```
+
 #### The ping command
 
-The *ping* command can be used to test connectivity between hosts. Ping works by sending an ICMP echo request from source to destination. The destination system then responds with an ICMP echo response packet. 
+The *ping* command can be used to test connectivity between hosts. Ping works by sending an ICMP echo request from source to destination. The destination system then responds with an ICMP echo response packet. First install the utilities for ping by running the below command using the yum package manager. 
 
-```copy
-ping 127.0.0.1
+```execute
+yum install iputils -y
+```
+
+```execute
+ping 172.17.0.6
+```
+
+```execute
+<ctrl-c>
+```
+
+#### The netcat command
+
+The *nc* command  is a computer networking utility for reading from and writing to network connections using TCP or UDP. This tool is a very versatile troubleshooting tool that has a variety of uses. The example below uses nc to listen on port 7777.
+
+```execute-1
+nc -l 7777
 ```
 
 #### The netstat command
 
-The *netstat* utility can list network connections, routing table, and network interfaces. 
+The *netstat* utility can list network connections, routing table, and network interfaces. You can run this in the second terminal window while the prior nc command is running to see the established netcat connection on port 7777. We pipe the head command to see the top of the output. 
 
-```copy
-netstat 
-    -a list all listening and nonlistening sockets
-    -i display network interfaces
-    -l list listening sockets
-    -r display routing table
+```execute-2
+netstat -plant | head
 ```
 
 #### Other useful commands
 
 - The **traceroute** utility allows you to see the hops that it takes to get from source to destination system.
-
-- The **nc** command goes a step beyond the ping command and established a TCP or UDP connection. One example to connect to a TCP connection on port 7777 would be `nc -l 7777`.
 
 - The **dig** and **host** commands can be used to find information on domain and hostnames. 
