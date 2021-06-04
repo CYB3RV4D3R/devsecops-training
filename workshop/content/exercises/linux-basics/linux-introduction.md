@@ -57,21 +57,3 @@ echo "Hello, Everyone!" > sample.txt
 ```execute
 cat sample.txt
 ```
-
-#### Variable interpolation
-
-workshop_name: {{ workshop_name }}
-
-session_namespace: {{ session_namespace }}
-
-workshop_namespace: {{ workshop_namespace }}
-
-training_portal: {{ training_portal }}
-
-ingress_domain: {{ ingress_domain }}
-
-ingress_protocol: {{ ingress_protocol }}
-
-#### Web site links
-
-[External](https://github.com/eduk8s)
