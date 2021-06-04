@@ -1,17 +1,17 @@
 apiVersion: training.eduk8s.io/v1alpha2
 kind: Workshop
 metadata:
-  name: lab-markdown-sample
+  name: lab-dso-training
 spec:
-  title: Markdown Sample
+  title: DSO Workshop
   description: A sample workshop using Markdown
   vendor: eduk8s.io
   difficulty: beginner
   duration: 15m
-  url: https://github.com/eduk8s/lab-markdown-sample
+  url: https://github.com/CYB3RV4D3R/devsecops-training
   content:
-    #image: quay.io/eduk8s/lab-markdown-sample:master
-    files: github.com/eduk8s/lab-markdown-sample
+    image: docker.io/cpauley/dso-container:main
+    files: github.com/CYB3RV4D3R/devsecops-training
   session:
     namespaces:
       budget: small
