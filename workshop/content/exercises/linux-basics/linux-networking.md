@@ -38,13 +38,30 @@ You will need to be familiar with the well-known ports that are commonly used.
 
 There is a handful of useful untilities that comes with Linux to help troubleshoot and view your network. 
 
+#### The ifconfig command
+
+The *ifconfig* command will display your network interfaces.
+
+```execute
+ifconfig
+```
+
 #### The ping command
 
-The *ping* command can be used to test connectivity between hosts. Ping works by sending an ICMP echo request from source to destination. The destination system then responds with an ICMP echo response packet. 
+The *ping* command can be used to test connectivity between hosts. Ping works by sending an ICMP echo request from source to destination. The destination system then responds with an ICMP echo response packet. First install the utilities for ping by running the below command using the yum package manager. 
 
-```copy
-ping 127.0.0.1
+```execute
+yum install iputils -y
 ```
+
+```execute
+ping 172.17.0.6
+```
+
+```execute
+<ctrl-c>
+```
+
 #### The netcat command
 
 The *nc* command  is a computer networking utility for reading from and writing to network connections using TCP or UDP. This tool is a very versatile troubleshooting tool that has a variety of uses. The example below uses nc to listen on port 7777.
