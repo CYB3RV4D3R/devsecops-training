@@ -10,7 +10,7 @@ spec:
   duration: 15m
   url: https://github.com/CYB3RV4D3R/devsecops-training
   content:
-    image: docker.io/cpauley/dso-container:main
+    image: docker.io/cpauley/cpauley:dso-container
     files: github.com/CYB3RV4D3R/devsecops-training
   session:
     namespaces:
