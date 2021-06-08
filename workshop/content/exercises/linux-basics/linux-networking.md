@@ -70,6 +70,10 @@ The *nc* command  is a computer networking utility for reading from and writing 
 nc -l 7777
 ```
 
+```execute
+<ctrl-c>
+```
+
 #### The netstat command
 
 The *netstat* utility can list network connections, routing table, and network interfaces. You can run this in the second terminal window while the prior nc command is running to see the established netcat connection on port 7777. We pipe the head command to see the top of the output. 

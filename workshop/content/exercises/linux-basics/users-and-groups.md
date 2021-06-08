@@ -39,3 +39,19 @@ id neo
 ```
 
 Additionally, when available you can use the *passwd* command to set a password to a user. For example: *passwd neo*
+
+#### Creating a group
+
+To create a group you will utilize the *groupadd* command. You can find the groups within '/etc/group'.
+
+```execute
+groupadd developer
+```
+
+```execute
+getent group | grep developer
+```
+
+```execute
+cat /etc/group
+```
