@@ -4,7 +4,7 @@ metadata:
   name: lab-dso-training
 spec:
   title: DSO Workshop
-  description: A sample workshop using Markdown
+  description: Workshop for DevSecOps
   vendor: eduk8s.io
   difficulty: beginner
   duration: 15m
