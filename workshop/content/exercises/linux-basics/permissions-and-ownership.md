@@ -35,6 +35,7 @@ The *chown* command allows you to change the user and group ownership of a file,
 **USER:** when the user is followed by the colon, and the group is not given, the user will become the owner of the files.
 
 **USER:GROUP** if both the user and the group is specified the user ownership of the files is changed to the given user and group ownership of the given group.
+
 **:GROUP** if the user is omitted and the group is prefixed with a colon, only the group ownership of the files are changed.
 
 For example, the following command will change the ownership of the file sample.txt to a new owner named neo:
