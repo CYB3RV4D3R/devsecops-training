@@ -55,3 +55,25 @@ getent group | grep developer
 ```execute
 cat /etc/group
 ```
+
+#### Secondary groups
+
+You can add users to other groups by using the *usermod* command. Linux users can only have a maximum of 15 secondary groups. 
+
+To find groups for the user neo:
+
+```execute
+groups neo
+```
+To add a secondary group:
+
+```execute
+usermod -a -G developer neo
+```
+
+Run the *groups neo* again to verify the new group was added to that user:
+
+```execute
+groups neo
+```
+
