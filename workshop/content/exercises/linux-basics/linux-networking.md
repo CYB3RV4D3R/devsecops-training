@@ -78,6 +78,9 @@ The *netstat* utility can list network connections, routing table, and network i
 netstat -plant | head
 ```
 
+```execute-1
+<ctrl-c>
+```
 #### Other useful commands
 
 - The **traceroute** utility allows you to see the hops that it takes to get from source to destination system.
