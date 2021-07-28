@@ -20,15 +20,14 @@ There are major benefits of adopting DevSecOps within your organization. Top of 
 - Processing text
 - Shell functions
 
-## Python Basics
-- Variables
-- Strings
-- List
-- Dictionaries
-- Networking
-- Exception Handling
-- Functions
-- File I/O, Sys Module, OS Module
+## Git Basics
+- Git Fundamentals 
+- Install Git 
+- Git Branches
+- Git Add, Commit, & Push
+- Git Merge
+- Git File Management
+- Git Workflows 
 
 ## YAML
 - What is YAML and what it is used for
